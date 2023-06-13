@@ -32,15 +32,15 @@ export const renderToDoList = () => {
     inputField.value = item.description;
     inputField.value = inputField.value.charAt(0).toUpperCase()
     + inputField.value.slice(1).toLowerCase();
-    const deleteBtn = document.createElement('button');
-    deleteBtn.classList.add('delete-btn');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.addEventListener('click', () => {
+    const deleteButton = document.createElement('button');
+    deleteButton.classList.add('delete-btn');
+    deleteButton.textContent = 'Delete';
+    deleteButton.addEventListener('click', () => {
       deleteTask(item.index);
     });
     div3.appendChild(checkbox);
     div3.appendChild(inputField);
-    div2.appendChild(deleteBtn);
+    div2.appendChild(deleteButton);
     div2.appendChild(div3);
     div1.appendChild(div2);
     listContainer.appendChild(div1);
